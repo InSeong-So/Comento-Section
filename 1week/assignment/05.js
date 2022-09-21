@@ -11,7 +11,7 @@ const object = {
   length: 5,
   method(callback) {
     callback();
-  }
+  },
 };
 
-object.method(callback, 1, 2); // 결과값 : ?
+object.method(callback, 1, 2); // 결과값 : undefined

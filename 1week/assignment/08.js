@@ -1,30 +1,34 @@
 /**
  * 리팩토링 해주세요!
  */
-class Audi {
+
+class Car {
+  model = "";
+
   constructor(model) {
-    this.brand = 'Audi'
     this.model = model;
   }
 
   start() {
-    console.log(`${this.brand} ${this.model} is starting...`);
+    console.log(this.brand, this.model);
   }
 }
-
-class BMW {
+class Audi extends Car {
+  brand = "Audi";
   constructor(model) {
-    this.brand = 'BMW'
-    this.model = model;
-  }
-
-  start() {
-    console.log(`${this.brand} ${this.model} is starting...`);
+    super(model);
   }
 }
 
-const Audi_A6 = new Audi('A6');
-const BMW_S_Class = new BMW('S_Class');
+class BMW extends Car {
+  brand = "BMW";
+  constructor(model) {
+    super(model);
+  }
+}
+
+const Audi_A6 = new Audi("A6");
+const BMW_S_Class = new BMW("S_Class");
 
 Audi_A6.start();
 BMW_S_Class.start();
